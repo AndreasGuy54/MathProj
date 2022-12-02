@@ -6,8 +6,12 @@
 
         internal void ShowMenu(string name, DateTime date)
         {
+            Console.Clear();
             Console.WriteLine("\n------------------------------------\n");
             Console.WriteLine($"Hello {name}. It's {date.DayOfWeek}. This is your math game.");
+            Console.WriteLine("Hit enter key to show the menu");
+            Console.ReadLine();
+            Console.WriteLine("\n");
 
             bool isGameOn = true;
 
@@ -29,7 +33,7 @@
                 switch (gameSelected.Trim().ToLower())
                 {
                     case "v":
-                        Helpers.GetGames();
+                        Helpers.PrintGames();
                         break;
                     case "a":
                         engine.AdditionGame("Addition game");
